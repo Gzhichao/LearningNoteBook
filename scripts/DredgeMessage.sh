@@ -28,3 +28,5 @@ lotus mpool replace --gas-feecap <参考ParentBaseFee> --gas-premium <原值0.25
 #批量疏通消息
 lotus mpool pending --local --cids | wc -l
 lotus mpool pending --local --cids | xargs -n 1 lotus mpool replace --auto --fee-limit 0.3
+#指定消息的接收方和发送方的钱包地址
+lotus mpool pending --local --cids --to f01538000 --from f3rb2as5lyjxu22szdtvorerilr5kkujgf2asnwdykgddachuj4fekgmv7q34ysbtyhirobtmebvipyan7lggq | xargs -n 1 lotus mpool replace --auto --fee-limit 0.3
